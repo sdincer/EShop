@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>4829a4f7-8538-4a13-a409-c65458ecab96</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..\..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Application\EShop.Services.Product.Application.Abstraction\EShop.Services.Product.Application.Abstraction.csproj" />
+    <ProjectReference Include="..\Application\EShop.Services.Product.Application.Bootstrapper\EShop.Services.Product.Application.Bootstrapper.csproj" />
+    <ProjectReference Include="..\Application\EShop.Services.Product.Application.Command\EShop.Services.Product.Application.Command.csproj" />
+    <ProjectReference Include="..\Application\EShop.Services.Product.Application.Query\EShop.Services.Product.Application.Query.csproj" />
+  </ItemGroup>
+
+</Project>

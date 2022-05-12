@@ -1,0 +1,53 @@
+version: '3.4'
+
+services:
+  mssqldb:
+    environment:
+      - SA_PASSWORD=Pass@word
+      - ACCEPT_EULA=Y
+    ports:
+      - "5433:1433"
+    volumes:
+      - mssql-db-vol:/var/opt/mssql
+  mongodb:
+    restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=1q2w3eASD
+    ports:
+      - "27017:27017"
+  mongoui:
+    restart: always
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=root
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=1q2w3eASD
+      - ME_CONFIG_MONGODB_URL=mongodb://root:1q2w3eASD@mongodb:27017/
+    ports:
+      - "8081:8081"
+  rabbitmq:
+    ports:
+      - "5672:5672"
+  eshop.services.customer.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - ConnectionStrings__SqlServer=Server=mssqldb;Database=EShop.Customer;User Id=sa;Password=Pass@word;TrustServerCertificate=false
+    ports:
+      - "5001:80"
+  eshop.services.product.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - ConnectionStrings__SqlServer=Server=mssqldb;Database=EShop.Product;User Id=sa;Password=Pass@word;TrustServerCertificate=false
+    ports:
+      - "5002:80"
+  eshop.services.order.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - ConnectionStrings__SqlServer=Server=mssqldb;Database=EShop.Order;User Id=sa;Password=Pass@word;TrustServerCertificate=false
+    ports:
+      - "5003:80"
+volumes:
+  mssql-db-vol:
+    external: false

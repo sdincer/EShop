@@ -1,0 +1,38 @@
+version: '3.4'
+
+services:
+  mssqldb:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+  mongodb:
+    image: mongo  
+  mongoui:
+    image: mongo-express
+    depends_on:
+      - mongodb  
+  rabbitmq:
+    image: rabbitmq:3-management-alpine 
+  eshop.services.customer.api:
+    image: ${DOCKER_REGISTRY-}eshopservicescustomerapi
+    build:
+      context: .
+      dockerfile: src/Services/Customer/EShop.Services.Customer.Api/Dockerfile
+    depends_on:
+      - mssqldb
+  eshop.services.product.api:
+    image: ${DOCKER_REGISTRY-}eshopservicesproductapi
+    build:
+      context: .
+      dockerfile: src/Services/Product/EShop.Services.Product.Api/Dockerfile
+    depends_on:
+      - mssqldb
+  eshop.services.order.api:
+    image: ${DOCKER_REGISTRY-}eshopservicesorderapi
+    build:
+      context: .
+      dockerfile: src/Services/Order/EShop.Services.Order.Api/Dockerfile
+    depends_on:
+      - mssqldb
+      - mongodb
+      - rabbitmq
+      - eshop.services.customer.api
+      - eshop.services.product.api

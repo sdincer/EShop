@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "EShop.Services.Product.Repository.Entity": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

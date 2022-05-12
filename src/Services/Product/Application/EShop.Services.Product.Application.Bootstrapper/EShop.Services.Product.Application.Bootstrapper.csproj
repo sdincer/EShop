@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Repository\EShop.Services.Product.Repository\EShop.Services.Product.Repository.csproj" />
+    <ProjectReference Include="..\EShop.Services.Product.Application.Abstraction\EShop.Services.Product.Application.Abstraction.csproj" />
+    <ProjectReference Include="..\EShop.Services.Product.Application.Command\EShop.Services.Product.Application.Command.csproj" />
+    <ProjectReference Include="..\EShop.Services.Product.Application.Query\EShop.Services.Product.Application.Query.csproj" />
+  </ItemGroup>
+
+</Project>
