@@ -20,13 +20,13 @@ Technology Assessment
 docker-compose up -d
 ```
 
-Check for containers
+To check containers
 
 ```plaintext
 docker-compose ps
 ```
 
-Stop to all containers of the project
+To stp all containers of the project
 
 ```plaintext
 docker-compose down
