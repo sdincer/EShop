@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -13,6 +13,13 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\EShop.Services.Order.Application.Bootstrapper\EShop.Services.Order.Application.Bootstrapper.csproj" />
+    <ProjectReference Include="..\Application\EShop.Services.Order.Application.Abstraction\EShop.Services.Order.Application.Abstraction.csproj" />
+    <ProjectReference Include="..\Application\EShop.Services.Order.Application.Command\EShop.Services.Order.Application.Command.csproj" />
+    <ProjectReference Include="..\Application\EShop.Services.Order.Application.Query\EShop.Services.Order.Application.Query.csproj" />
   </ItemGroup>
 
 </Project>

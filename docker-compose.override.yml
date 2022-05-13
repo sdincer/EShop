@@ -46,6 +46,7 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
       - ConnectionStrings__SqlServer=Server=mssqldb;Database=EShop.Order;User Id=sa;Password=Pass@word;TrustServerCertificate=false
+      - ConnectionStrings__Mongo=mongodb://root:1q2w3eASD@mongodb:27017/
     ports:
       - "5003:80"
 volumes:
