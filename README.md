@@ -41,3 +41,9 @@ docker-compose down
 ### Product Entity Relationship
 ![Product Entity](/architecture/product.drawio.png)
 
+
+### Customer And Order Entity Relationship
+![Customer And Order Entity](/architecture/customerandorder.drawio.png)
+
+
+
