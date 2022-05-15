@@ -12,7 +12,7 @@ Technology Assessment
 *   Mongo (to store the order snapshot, denormalize data)
 *   RabbitMQ (to publish order created event via RabbitMQ, to handle order created event and to create order snapshot)
 *   Docker
-*   3rd party libraries: Mediatr (to segregate command - query and to isolate business)
+*   3rd party libraries: Mediatr (to segregate command - query, to isolate business), Ocelot (Api Gateway)
 
 ### How to Running
 
