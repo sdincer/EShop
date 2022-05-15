@@ -33,3 +33,6 @@ docker-compose down
 ```
 
 <table><tbody><tr><td><strong>Customer Api</strong></td><td>http://localhost:5001/swagger/index.html</td></tr><tr><td><strong>Product Api</strong></td><td>http://localhost:5002/swagger/index.html</td></tr><tr><td><strong>Order Api</strong></td><td>http://localhost:5003/swagger/index.html</td></tr><tr><td><strong>Mongo Management Ui</strong></td><td>http://localhost:8081</td></tr></tbody></table>
+
+
+(/architecture/architecture.drawio.png)
