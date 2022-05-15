@@ -26,7 +26,7 @@ To check containers
 docker-compose ps
 ```
 
-To stp all containers of the project
+To stop all containers of the project
 
 ```plaintext
 docker-compose down
