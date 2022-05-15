@@ -1,0 +1,20 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/customers",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/customers",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "eshop.services.customer.api",
+          "Port": 5001
+        }
+      ]
+    }
+  ],
+
+  "GlobalConfiguration": {
+    "RequestIdKey": "ot-traceid"
+  }
+}

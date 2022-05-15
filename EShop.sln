@@ -63,17 +63,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sql", "Sql", "{AF1683D9-C2A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mongo", "Mongo", "{07D78494-75E2-4BAA-8175-9ADB847B93BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShop.Services.Order.Repository.Sql.Entity", "src\Services\Order\Repository\Sql\EShop.Services.Order.Repository.Sql.Entity\EShop.Services.Order.Repository.Sql.Entity.csproj", "{DE3CEDA6-5A74-4BDF-B40C-C407EE800ED5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EShop.Services.Order.Repository.Sql.Entity", "src\Services\Order\Repository\Sql\EShop.Services.Order.Repository.Sql.Entity\EShop.Services.Order.Repository.Sql.Entity.csproj", "{DE3CEDA6-5A74-4BDF-B40C-C407EE800ED5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShop.Services.Order.Repository.Sql", "src\Services\Order\Repository\Sql\EShop.Services.Order.Repository.Sql\EShop.Services.Order.Repository.Sql.csproj", "{8D75AC12-5794-48B7-A64E-9159E6FC242F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EShop.Services.Order.Repository.Sql", "src\Services\Order\Repository\Sql\EShop.Services.Order.Repository.Sql\EShop.Services.Order.Repository.Sql.csproj", "{8D75AC12-5794-48B7-A64E-9159E6FC242F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShop.Services.Order.Repository.Mongo.Entity", "src\Services\Order\Repository\Mongo\EShop.Services.Order.Repository.Mongo.Entity\EShop.Services.Order.Repository.Mongo.Entity.csproj", "{807B07B4-2372-479A-A6A9-32B25C4AC7A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EShop.Services.Order.Repository.Mongo.Entity", "src\Services\Order\Repository\Mongo\EShop.Services.Order.Repository.Mongo.Entity\EShop.Services.Order.Repository.Mongo.Entity.csproj", "{807B07B4-2372-479A-A6A9-32B25C4AC7A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShop.Services.Order.Repository.Mongo", "src\Services\Order\Repository\Mongo\EShop.Services.Order.Repository.Mongo\EShop.Services.Order.Repository.Mongo.csproj", "{85EF619A-D747-4CB2-9A71-3C36E9D9F040}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EShop.Services.Order.Repository.Mongo", "src\Services\Order\Repository\Mongo\EShop.Services.Order.Repository.Mongo\EShop.Services.Order.Repository.Mongo.csproj", "{85EF619A-D747-4CB2-9A71-3C36E9D9F040}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShop.Services.Order.Application.Abstraction", "src\Services\Order\Application\EShop.Services.Order.Application.Abstraction\EShop.Services.Order.Application.Abstraction.csproj", "{13D21621-025B-4B9F-8AB7-2B72CCDC7724}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EShop.Services.Order.Application.Abstraction", "src\Services\Order\Application\EShop.Services.Order.Application.Abstraction\EShop.Services.Order.Application.Abstraction.csproj", "{13D21621-025B-4B9F-8AB7-2B72CCDC7724}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShop.Services.Order.Application.Bootstrapper", "EShop.Services.Order.Application.Bootstrapper\EShop.Services.Order.Application.Bootstrapper.csproj", "{72160A25-5CC1-41C5-A4BF-6E0334E6C6AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EShop.Services.Order.Application.Bootstrapper", "EShop.Services.Order.Application.Bootstrapper\EShop.Services.Order.Application.Bootstrapper.csproj", "{72160A25-5CC1-41C5-A4BF-6E0334E6C6AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShop.Services.ApiGateway", "src\Services\EShop.Services.ApiGateway\EShop.Services.ApiGateway.csproj", "{1003EC79-78C7-43AA-9D46-15A9AE39B83A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -173,6 +175,10 @@ Global
 		{72160A25-5CC1-41C5-A4BF-6E0334E6C6AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72160A25-5CC1-41C5-A4BF-6E0334E6C6AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72160A25-5CC1-41C5-A4BF-6E0334E6C6AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1003EC79-78C7-43AA-9D46-15A9AE39B83A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1003EC79-78C7-43AA-9D46-15A9AE39B83A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1003EC79-78C7-43AA-9D46-15A9AE39B83A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1003EC79-78C7-43AA-9D46-15A9AE39B83A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -212,6 +218,7 @@ Global
 		{85EF619A-D747-4CB2-9A71-3C36E9D9F040} = {07D78494-75E2-4BAA-8175-9ADB847B93BE}
 		{13D21621-025B-4B9F-8AB7-2B72CCDC7724} = {F5172F0C-CCD9-4617-AF4C-8B30C1CD48BE}
 		{72160A25-5CC1-41C5-A4BF-6E0334E6C6AB} = {F5172F0C-CCD9-4617-AF4C-8B30C1CD48BE}
+		{1003EC79-78C7-43AA-9D46-15A9AE39B83A} = {A59C8C53-5019-4CBA-98B3-4AB478AF7BFF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {63E5E487-91BF-440E-AFAE-689F053E1F8A}

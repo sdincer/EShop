@@ -2,13 +2,14 @@ version: '3.4'
 
 services:
   mssqldb:
+    restart: always
     environment:
       - SA_PASSWORD=Pass@word
       - ACCEPT_EULA=Y
     ports:
-      - "5433:1433"
+      - "1433:1433"
     volumes:
-      - mssql-db-vol:/var/opt/mssql
+      - mssql-db-vol:/var/opt/sql
   mongodb:
     restart: always
     environment:
@@ -24,31 +25,38 @@ services:
       - ME_CONFIG_MONGODB_URL=mongodb://root:1q2w3eASD@mongodb:27017/
     ports:
       - "8081:8081"
+
   rabbitmq:
     ports:
       - "5672:5672"
   eshop.services.customer.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://+:80
-      - ConnectionStrings__SqlServer=Server=mssqldb;Database=EShop.Customer;User Id=sa;Password=Pass@word;TrustServerCertificate=false
+      - ASPNETCORE_URLS=http://+:5001
+      - ConnectionStrings__SqlServer=Server=mssqldb;Database=EShop.Customer;User Id=sa;Password=Pass@word
     ports:
-      - "5001:80"
+      - "5001:5001"
   eshop.services.product.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://+:80
-      - ConnectionStrings__SqlServer=Server=mssqldb;Database=EShop.Product;User Id=sa;Password=Pass@word;TrustServerCertificate=false
+      - ASPNETCORE_URLS=http://+:5002
+      - ConnectionStrings__SqlServer=Server=mssqldb;Database=EShop.Product;User Id=sa;Password=Pass@word
     ports:
-      - "5002:80"
+      - "5002:5002"
   eshop.services.order.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://+:80
-      - ConnectionStrings__SqlServer=Server=mssqldb;Database=EShop.Order;User Id=sa;Password=Pass@word;TrustServerCertificate=false
+      - ASPNETCORE_URLS=http://+:5003
+      - ConnectionStrings__SqlServer=Server=mssqldb;Database=EShop.Order;User Id=sa;Password=Pass@word
       - ConnectionStrings__Mongo=mongodb://root:1q2w3eASD@mongodb:27017/
     ports:
-      - "5003:80"
+      - "5003:5003"
+  eshop.services.apigateway:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5000
+    ports:
+      - "5000:5000"
 volumes:
   mssql-db-vol:
     external: false

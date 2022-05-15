@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   mssqldb:
-    image: mcr.microsoft.com/mssql/server:2019-latest
+    image: mcr.microsoft.com/mssql/server:2017-latest
   mongodb:
     image: mongo  
   mongoui:
@@ -35,4 +35,17 @@ services:
       - mongodb
       - rabbitmq
       - eshop.services.customer.api
+      - eshop.services.product.api 
+  eshop.services.apigateway:
+    image: ${DOCKER_REGISTRY-}eshopservicesapigateway
+    build:
+      context: .
+      dockerfile: src/Services/EShop.Services.ApiGateway/Dockerfile
+    depends_on:
+      - eshop.services.customer.api
       - eshop.services.product.api
+      - eshop.services.order.api
+    links:
+      - eshop.services.customer.api
+      - eshop.services.product.api
+      - eshop.services.order.api
