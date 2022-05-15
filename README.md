@@ -43,7 +43,7 @@ docker-compose down
 
 
 ### Customer And Order Entity Relationship
-![Customer And Order Entity](/architecture/customerandorder.drawio.png)
+![Customer And Order Entity](/architecture/CustomerAndOrder.drawio.png)
 
 
 
