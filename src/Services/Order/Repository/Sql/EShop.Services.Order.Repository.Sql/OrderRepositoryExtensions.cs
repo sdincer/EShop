@@ -7,7 +7,7 @@ namespace EShop.Services.Order.Repository.Sql
 {
     public static class OrderRepositoryExtensions
     {
-        public static IServiceCollection RegisterRepository(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection RegisterSqlRepository(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<OrderDbContext>(options => options
                 .UseSqlServer(configuration.GetConnectionString("SqlServer")));

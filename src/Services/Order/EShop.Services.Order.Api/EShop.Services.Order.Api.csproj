@@ -16,8 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\EShop.Services.Order.Application.Bootstrapper\EShop.Services.Order.Application.Bootstrapper.csproj" />
     <ProjectReference Include="..\Application\EShop.Services.Order.Application.Abstraction\EShop.Services.Order.Application.Abstraction.csproj" />
+    <ProjectReference Include="..\Application\EShop.Services.Order.Application.Bootstrapper\EShop.Services.Order.Application.Bootstrapper.csproj" />
     <ProjectReference Include="..\Application\EShop.Services.Order.Application.Command\EShop.Services.Order.Application.Command.csproj" />
     <ProjectReference Include="..\Application\EShop.Services.Order.Application.Query\EShop.Services.Order.Application.Query.csproj" />
   </ItemGroup>

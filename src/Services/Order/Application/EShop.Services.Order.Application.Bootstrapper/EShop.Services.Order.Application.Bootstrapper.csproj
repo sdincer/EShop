@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\External\EShop.Services.Order.External.ServiceClient\EShop.Services.Order.External.ServiceClient.csproj" />
+    <ProjectReference Include="..\..\Repository\Mongo\EShop.Services.Order.Repository.Mongo\EShop.Services.Order.Repository.Mongo.csproj" />
+    <ProjectReference Include="..\..\Repository\Sql\EShop.Services.Order.Repository.Sql\EShop.Services.Order.Repository.Sql.csproj" />
+    <ProjectReference Include="..\EShop.Services.Order.Application.Abstraction\EShop.Services.Order.Application.Abstraction.csproj" />
+    <ProjectReference Include="..\EShop.Services.Order.Application.Command\EShop.Services.Order.Application.Command.csproj" />
+    <ProjectReference Include="..\EShop.Services.Order.Application.Query\EShop.Services.Order.Application.Query.csproj" />
+  </ItemGroup>
+
+</Project>
