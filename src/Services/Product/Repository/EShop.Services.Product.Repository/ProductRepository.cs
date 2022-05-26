@@ -4,7 +4,7 @@ using System.Text;
 
 namespace EShop.Services.Product.Repository
 {
-    internal class ProductRepository : IProductRepository
+    public class ProductRepository : IProductRepository
     {
         private readonly ProductDbContext _dbContext;
 

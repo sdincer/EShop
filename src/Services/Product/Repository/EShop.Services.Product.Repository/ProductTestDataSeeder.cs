@@ -1,6 +1,6 @@
 ﻿namespace EShop.Services.Product.Repository
 {
-    internal class ProductTestDataSeeder
+    public class ProductTestDataSeeder
     {
         private readonly ProductDbContext _dbContext;
 
@@ -164,6 +164,14 @@
                         new Entity.ListingVariant{ Variant = variant1.Entity, Value = "Siyah" },
                         new Entity.ListingVariant{ Variant = variant2.Entity, Value = "S" },
                     }
+                },
+                new Entity.Listing
+                {
+                    Product = product1.Entity,
+                    Sku = "H6702703",
+                    Stock = 9,
+                    Thumbnail = string.Empty,
+                    UnitPrice = 1022
                 },
                 new Entity.Listing
                 {

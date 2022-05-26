@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EShop.Services.Product.Repository
 {
-    internal partial class ProductDbContext : DbContext
+    public partial class ProductDbContext : DbContext
     {
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
